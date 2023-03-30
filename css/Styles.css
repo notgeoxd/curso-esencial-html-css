@@ -1,0 +1,76 @@
+@font-face { /*para poner una fuente en la pagina */
+    font-family: charted;
+    src: url(../fonts/fonts/charter-regular.otf);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face { /*para poner una fuente en la pagina */
+    font-family: charted;
+    src: url(../fonts/fonts/charter-italic.otf);
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face { /*para poner una fuente en la pagina */
+    font-family: charted;
+    src: url(../fonts/fonts/charter-bold.otf);
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face { /*para poner una fuente en la pagina */
+    font-family: charted;
+    src: url(../fonts/fonts/charter-bold-italic.otf);
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root {
+    font-size: 18px;
+    --gray30: #212121; /*para que sea mas facil poner colores a mas paginas*/
+    --gray20: #212429;
+    --gray10: #616161;
+}
+
+body {
+    color: var(--gray30); 
+    font-family: charted; /*cuidado con las fuentes que eligas, no todas estan dissponibles*/ 
+}
+
+a {
+    color: var(--gray30); 
+}
+
+header {
+    font-size: 14px;
+    color: var(--gray10); /*para quita subrallado de algun texto*/
+    /* color: var(red); podemos cambiar una parte del texto espesificando el color que queremos */
+}
+header a {
+    color: var(--gray10);
+    text-decoration: none; 
+}
+header a:hover { /*cambiar el color al texto caundo el raton esta encima*/
+    color: var(--gray30);
+}
+
+nav details summary {
+    font-weight: bold; /*Poner el texto en negrita*/
+}
+
+h1 {
+    font-size: 60px;
+    /* font-size: 3.75px; */
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+
+
+
+
+
