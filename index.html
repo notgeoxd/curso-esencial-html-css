@@ -12,50 +12,51 @@
     </head>
     <body>
         <div class="hero"></div> <!--para crear un background-->
+        
         <div class="header">
             <div class="wrapper">
-                <header> <!-- <header> es igual a cabezera -->
                 <div class="header-content">
-                    <nav> <!-- <nav> es una navegacion (visualmente no es nada pero si lo inspecionamos es una semantica mejor)-->
-                        <details open> <!-- details para hacer menu desplegable-->
-                            <summary>
-                                Setup
-                            </summary> 
-                            <ol> <!-- <ol> significa ordener list(enumera una lista con numeros 1. 2. etc)  -->
-                                <!-- <ul> es urdenet list que es lo mismo pero con puntos, no con numeros-->
-                                <li> <!-- <li> item list o elemento de lista, declara uno de los elementos de una lista-->
-                                    <a href="#Google_Chrome">Google Chrome</a>
-                                    <!-- href= hace scrol a la pagina hasta la linea que le ponel el id -->
-                                    </li>
-                                    <li><a href="#Visual_Studio_Code">Visual Studio Code</a></li>
-                                    <li><a href="#Figma">Figma</a></li>
-                                    <li><a href="#GitHub">GitHub</a></li>
-                            </ol>              
-                        </details>
-                        <details>
-                            <summary>
-                                Conceptos esenciales del Desarrollo Web
-                            </summary>
-                            <ol>
-                                <li><a href="#Qué_es_HTML">Qué es HTML</a></li>
-                                <li><a href="#Etiquetas">Etiquetas</a></li>
-                                <li><a href="#DOM">DOM</a></li>
-                                <li><a href="#Atributos">Atributos</a></li>
-                                <li><a href="#Semántica">Semántica</a></li>
-                                <li><a href="#CSS">Qué es CSS</a></li>
-                            </ol>
-                        </details>
-                    </nav>
-                </header> 
+                    <header> <!-- <header> es igual a cabezera -->
+                        <nav> <!-- <nav> es una navegacion (visualmente no es nada pero si lo inspecionamos es una semantica mejor)-->
+                            <details open> <!-- details para hacer menu desplegable-->
+                                <summary>
+                                    Setup
+                                </summary> 
+                                <ol> <!-- <ol> significa ordener list(enumera una lista con numeros 1. 2. etc)  -->
+                                    <!-- <ul> es urdenet list que es lo mismo pero con puntos, no con numeros-->
+                                    <li> <!-- <li> item list o elemento de lista, declara uno de los elementos de una lista-->
+                                        <a href="#Google_Chrome">Google Chrome</a>
+                                        <!-- href= hace scrol a la pagina hasta la linea que le ponel el id -->
+                                        </li>
+                                        <li><a href="#Visual_Studio_Code">Visual Studio Code</a></li>
+                                        <li><a href="#Figma">Figma</a></li>
+                                        <li><a href="#GitHub">GitHub</a></li>
+                                </ol>              
+                            </details>
+                            <details>
+                                <summary>
+                                    Conceptos esenciales del Desarrollo Web
+                                </summary>
+                                <ol>
+                                    <li><a href="#Qué_es_HTML">Qué es HTML</a></li>
+                                    <li><a href="#Etiquetas">Etiquetas</a></li>
+                                    <li><a href="#DOM">DOM</a></li>
+                                    <li><a href="#Atributos">Atributos</a></li>
+                                    <li><a href="#Semántica">Semántica</a></li>
+                                    <li><a href="#CSS">Qué es CSS</a></li>
+                                </ol>
+                            </details>
+                        </nav>
+                    </header> 
                 </div>
             </div>
         </div>
         <main class="main"> <!-- contenedo para html -->
-                
-                
-                <div class="wrapper">
-                    <div class="main-content">
-                        <h1>
+
+
+            <div class="wrapper">
+                <div class="main-content">
+                    <h1>
                             Curso esencial de HTML y CSS
                             <!--<h1> Representa el mensaje mas importante de la web </h1>-->
                             <!--existen muchas mas etiquetas va de la h1-h6 y se ve de grande a pequeño
@@ -73,11 +74,11 @@
                     <hr>
         
                     <section class="section-content">
-                            <h2>Setup</h2>
-                            <img src="./imagenes/Google_Chrome.png" alt="Logo de Google Chrom" title="Logo de Google Chrom">
-                                <!--"atributo" src= url de una imagen-->
-                                <!--"atributo" alt= descripcion previa por si no carega la imagen-->
-                                <!--"atributo" title= una descripcion que aparece cuando dejas el raton encima de una imagen-->
+                        <h2>Setup</h2>
+                        <img src="./imagenes/Google_Chrome.png" alt="Logo de Google Chrom" title="Logo de Google Chrom">
+                            <!--"atributo" src= url de una imagen-->
+                            <!--"atributo" alt= descripcion previa por si no carega la imagen-->
+                            <!--"atributo" title= una descripcion que aparece cuando dejas el raton encima de una imagen-->
                             <h3 id="Google_Chrome" >Google Chrome</h3>
                             <p>Chrome va a ser el navegador que utilizaremos en el curso por su extenso soporte de nuevos estándares y herramientas de desarrollo avanzadas y de amigable uso.</p>
                             <img src="./imagenes/Visual_Studio_Code.png" alt="Logo de Visual Studio Code" title="Logo de Visual Studio Code">
@@ -99,29 +100,27 @@
                                 </span>
                             </p>
                         </blockquote>
-                        </section>
+                    </section>
         
                     <hr> <!-- <hr> es una line que separan las secciones  -->
         
                     <section class="section-content">
                         <h2>Conceptos esenciales del Desarrollo Web</h2>
                         <h3 id="Qué_es_HTML">Qué es HTML</h3>
-                        <p>Hyper Text Markup Language o Lenguaje de marcas Hipertexto. Es el componente más básico de la web. Define el significado y la estructura del contenido. </p>
+                        <p>Hyper Text Markup Language o Lenguaje de marcas Hipertexto. Es el componente más básico de la web. Define el significado y la estructura del contenido.const name = 'your name' </p>
                         <!-- <p><code> hola </code> con esto puedes escribir codigo dentro de un parafo </p> -->
-                        <pre> <!--cunado quieres ocupar toda una haria con codigo (tambien inclue los espacios literalmente)-->
-            <!-- https://www.freeformatter.com/html-escape.html#before-output (escapar HTML) -->
+                        <pre> <!--cunado quieres ocupar toda una haria con codigo (tambien inclue los espacios literalmente)--> <!-- https://www.freeformatter.com/html-escape.html#before-output (escapar HTML) -->
 &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;html lang="en"&gt;&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
 &lt;title&gt;Document&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;
+
                         </pre>
                         <h3 id="Etiquetas">Etiquetas</h3>
                         <p>Las etiquetas HTML van a ayudarnos a brindar una estructura y semántica al contenido de nuestro website y cada una tiene características y usos diferentes aunque visualmente den un resultado similar.</p>

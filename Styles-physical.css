@@ -1,0 +1,271 @@
+@font-face { /*para poner una fuente en la pagina des de nuestros documentos */
+    font-family: charted;
+    src: url(../fonts/fonts/charter-regular.otf);
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face { 
+    font-family: charted;
+    src: url(../fonts/fonts/charter-italic.otf);
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face { 
+    font-family: charted;
+    src: url(../fonts/fonts/charter-bold.otf);
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face { 
+    font-family: charted;
+    src: url(../fonts/fonts/charter-bold-italic.otf);
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root {
+    font-size: 18px;
+    --gray40: #212121; /*para que sea mas facil poner colores a mas paginas*/
+    --gray30: #212429;
+    --gray20: #424242;
+    --gray10: #616161;
+}
+
+html {
+    scroll-behavior: smooth;
+    }
+
+
+body {
+    color: var(--gray40); 
+    font-family: 'Roboto', sans-serif;
+    /*font-family: charted; cuidado con las fuentes que eligas, no todas estan dissponibles*/ 
+    margin: 0;
+}
+
+a {
+    color: var(--gray40); 
+}
+
+header {
+    font-size: 14px;
+    width: 188px;
+    color: var(--gray10); /*para quita subrallado de algun texto*/
+    position: absolute;
+    top: 64px;
+    left: -232px;
+    z-index: 1;
+    /* color: var(red); podemos cambiar una parte del texto espesificando el color que queremos */
+    /*position: relative; /*mover mi elemento sin que el lugar ficico en que este ubicado se altere */
+    /* position: absolute; se ubica en la posicion y direcion que tiene mi pagina*/
+    /*position: fixed; persigue la pagina () osea siempre se muetra en pantalla, da igual si vagas o subes en la web*/
+    /*position: sticky; 1.ocupa todo el ancho 2.si le ponemos por ejemplo top:0 ,s e va a mover exactamente como el fixed pero mas bonito*/
+    /* z-index: ; (puedes hacer que se ponga detreas de las cosas o delante ) */
+}
+
+header a {
+    color: var(--gray10);
+    text-decoration: none; 
+}
+header a:hover { /*cambiar el color al texto caundo el raton esta encima*/
+    color: var(--gray40);
+}
+
+nav details summary {
+    font-weight: bold; /*Poner el texto en negrita*/
+}
+
+header li {
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: 60px;
+    /* font-size: 3.75px; */
+    margin-top: 64px;
+    margin-bottom: 16px;
+    font-weight: normal;
+    /* width: ; /*darle el tamaño que quiera de longitud*/
+    /* height: ; darle el tamaño que quiera de altura */
+    /* padding: ; darle el tamaño que quiera dentro de la caja/ */
+    /* margin: top right bottom left; esto funciona como las manecillas del un reloj*/
+    /* margin: 64px 10px 16px 10px; esto es un ejemplo */
+
+}
+
+/* h1 ~ p {
+    margin-bottom: 64px;
+} */
+
+hr {
+    margin: 64px 0;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 64px 0px 40px;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    font-weight: normal;
+    position: sticky;
+    top: 0;
+    background: white;
+}
+
+pre {
+    background: #FEC62E;
+    padding: 40px; /*pudding es el relleno*/
+    font-family: "Roboto";
+    line-height: 24px;
+}
+
+blockquote {
+    font-size: 24px;
+    margin: 32px 0px;
+    padding-left: 16px;
+    line-height: 24px;
+    /* border: 1px solid var(--gray30); llave magica para hacer bordes en la vida */
+    border-left: 4px solid var(--gray30);
+/* border-radius: 30px; para hacer bordes rodeados */
+}
+
+blockquote span {
+    color: var(--gray10) ;
+}
+
+blockquote span::before {
+    content: "-";
+}
+.header {
+    position: sticky;
+    top: 0;
+}
+
+.header-content {
+    position: relative;
+}
+
+.main {
+    /* background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/pattern.png'); */
+}
+
+.wrapper { /*tecnica del wrapper(para ajustar la caja de toda la web)*/
+    width: 902px; /**/
+    margin: auto;
+}
+
+.main-content { /*tecnica del wrapper(para ajustar la caja de toda la web)*/
+    /* padding: 20px; */
+    background: white;
+    /* position: absolute;
+    z-index: 1; */
+}
+
+.title {
+    background: red;
+}
+.services {
+    background: purple;
+}
+.pricing {
+    background: blue;
+}
+.debug { /*para encontrar bugs*/
+    box-shadow: inset 0 0 0 1px red;
+    outline: 1px solid red;
+    background: red;
+    /* border: 1px solid red !important;
+    box-sizing: border-box; */
+}
+
+
+.hero {
+    background-image: linear-gradient(to top, rgb(255, 255, 255), transparent) , url("../imagenes/patron-1.png"); /*asi se pone color encima de la imagen pero procurando que sea transparente*/
+    /* background-repeat: no-repeat; para que no se repita  */
+    /* background-position: center; para que la imagen se centre  */
+    /* background-size: cover; para que se estire sin que pierda la porpocion  */
+    height: 350px;
+}
+
+.section-content {
+    margin-top: 164px;
+    position: relative;
+}
+
+.section-content:first-of-type{
+    margin: 0px;
+}
+
+
+.section-content ol li {
+    line-height: 24px;
+}
+
+.section-content ul li {
+    margin-bottom: 16px;
+}
+
+.section-content + hr {
+    display: none;
+}
+.section-content img {
+    margin-top: 40px;
+}
+
+.section-content { /*https://www.w3.org/TR/CSS2/generate.html#counter-styles para mas info*/
+    counter-reset: TitleList;
+}
+.section-content h3 {
+    counter-increment: TitleList;
+    padding-bottom: 8px;
+}
+/* a continuasion vamos a ver los seudoelementos mas im usados (se usa para dalre una buena vicualizacion"para que se vea bonico" lo agregamos aqui para no ponerlo en la frace porque no se debe leer) */
+.section-content h3::before {
+    content: counter(TitleList, decimal) ". ";
+    
+}
+
+.section-content h3::after{
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: var(--gray20);
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+
+
+
+/* para cambiar el color cuando seleciones la un paragrafo en la web */
+/* ::selection { 
+    background: green;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

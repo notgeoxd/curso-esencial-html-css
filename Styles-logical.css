@@ -1,0 +1,141 @@
+@font-face { /*para poner una fuente en la pagina des de nuestros documentos */
+    font-family: charted;
+    src: url(../fonts/fonts/charter-regular.otf);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face { 
+    font-family: charted;
+    src: url(../fonts/fonts/charter-italic.otf);
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face { 
+    font-family: charted;
+    src: url(../fonts/fonts/charter-bold.otf);
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face { 
+    font-family: charted;
+    src: url(../fonts/fonts/charter-bold-italic.otf);
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root {
+    font-size: 18px;
+    --gray40: #212121; /*para que sea mas facil poner colores a mas paginas*/
+    --gray30: #212429;
+    --gray20: #424242;
+    --gray10: #616161;
+}
+
+body {
+    color: var(--gray40); 
+    font-family: 'Roboto', sans-serif;
+
+    /*font-family: charted; cuidado con las fuentes que eligas, no todas estan dissponibles*/ 
+}
+
+a {
+    color: var(--gray40); 
+}
+
+header {
+    font-size: 14px;
+    color: var(--gray10); /*para quita subrallado de algun texto*/
+    /* color: var(red); podemos cambiar una parte del texto espesificando el color que queremos */
+}
+header a {
+    color: var(--gray10);
+    text-decoration: none; 
+}
+header a:hover { /*cambiar el color al texto caundo el raton esta encima*/
+    color: var(--gray40);
+}
+
+nav details summary {
+    font-weight: bold; /*Poner el texto en negrita*/
+}
+
+h1 {
+    font-size: 60px;
+    /* font-size: 3.75px; */
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+pre {
+    background: #FEC62E;
+}
+
+.hero {
+    background-image: linear-gradient(to top, rgb(255, 255, 255), transparent) , url("../imagenes/patron-1.png"); /*asi se pone color encima de la imagen pero procurando que sea transparente*/
+    /* background-repeat: no-repeat; para que no se repita  */
+    /* background-position: center; para que la imagen se centre  */
+    /* background-size: cover; para que se estire sin que pierda la porpocion  */
+    height: 350px;
+}
+
+.section-content { /*https://www.w3.org/TR/CSS2/generate.html#counter-styles para mas info*/
+    counter-reset: TitleList;
+}
+.section-content h3 {
+    counter-increment: TitleList;
+}
+/* a continuasion vamos a ver los seudoelementos mas im usados (se usa para dalre una buena vicualizacion"para que se vea bonico" lo agregamos aqui para no ponerlo en la frace porque no se debe leer) */
+.section-content h3::before {
+    content: counter(TitleList);
+    
+}
+
+.section-content h3::after{
+    content: "";
+    /* Rectangle 57 */
+    width: 228px;
+    height: 4px;
+    background: var(--gray20);
+    display: block;
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    
+}
+
+
+
+/* para cambiar el color cuando seleciones la un paragrafo en la web */
+/* ::selection { 
+    background: green;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
