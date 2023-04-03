@@ -53,7 +53,7 @@ header {
     color: var(--gray10); /*para quita subrallado de algun texto*/
     position: absolute;
     top: 64px;
-    left: 22px;
+    left: -232px;
     z-index: 1;
     /* color: var(red); podemos cambiar una parte del texto espesificando el color que queremos */
     /*position: relative; /*mover mi elemento sin que el lugar ficico en que este ubicado se altere */
@@ -88,7 +88,6 @@ h1 {
     /* width: ; /*darle el tamaño que quiera de longitud*/
     /* height: ; darle el tamaño que quiera de altura */
     /* padding: ; darle el tamaño que quiera dentro de la caja/ */
-
     /* margin: top right bottom left; esto funciona como las manecillas del un reloj*/
     /* margin: 64px 10px 16px 10px; esto es un ejemplo */
 
@@ -152,8 +151,7 @@ blockquote span::before {
 }
 
 .main {
-    background-color: rgb(175, 173, 27);
-
+    /* background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/pattern.png'); */
 }
 
 .wrapper { /*tecnica del wrapper(para ajustar la caja de toda la web)*/
@@ -162,10 +160,10 @@ blockquote span::before {
 }
 
 .main-content { /*tecnica del wrapper(para ajustar la caja de toda la web)*/
-    padding: 20px;
+    /* padding: 20px; */
     background: white;
-    position: absolute;
-    z-index: 1;
+    /* position: absolute;
+    z-index: 1; */
 }
 
 .title {
