@@ -25,63 +25,95 @@
 
 :root {
     font-size: 18px;
-    --gray40: #212121; /*para que sea mas facil poner colores a mas paginas*/
-    --gray30: #212429;
-    --gray20: #424242;
-    --gray10: #616161;
+    --white40: #ffffff; /*para que sea mas facil poner colores a mas paginas*/
+    --white30: #3A3539;
+    --white20: #A5A3A5;
+    --white10: #616161;
 }
 
 body {
-    color: var(--gray40); 
-    font-family: 'Roboto', sans-serif;
-
+    color: var(--white40); 
+    font-family: 'Nunito', sans-serif;
+    background: #251F24;
+    margin: 0;
     /*font-family: charted; cuidado con las fuentes que eligas, no todas estan dissponibles*/ 
 }
 
 a {
-    color: var(--gray40); 
+    color: var(--white40); 
 }
 
 header {
     font-size: 14px;
-    color: var(--gray10); /*para quita subrallado de algun texto*/
+    color: var(--white40); /*para quita subrallado de algun texto*/
     /* color: var(red); podemos cambiar una parte del texto espesificando el color que queremos */
 }
+
+header li {
+    color: var(--white20);
+}
+
 header a {
-    color: var(--gray10);
+    color: var(--white20);
     text-decoration: none; 
 }
 header a:hover { /*cambiar el color al texto caundo el raton esta encima*/
-    color: var(--gray40);
+    color: var(--white40);
 }
 
 nav details summary {
     font-weight: bold; /*Poner el texto en negrita*/
 }
 
+/* h1, h2, h3 { */
+    /* font-weight: normal; */
+/* } */
+
 h1 {
     font-size: 60px;
+    margin-block-start: 64px;
+    margin-block-end: 16px;
     /* font-size: 3.75px; */
 }
 
 h2 {
     font-size: 2em;
+    margin-block: 40px;
 }
 
 h3 {
     font-size: 1.5em;
+    font-weight: 600;
+    margin-block: 16px;
+}
+
+hr {
+    margin-block: 40px;
+    border-color: var(--white10);
 }
 
 pre {
-    background: #FEC62E;
+    background: var(--white30);
+}
+
+p {
+    color: var(--white20);
 }
 
 .hero {
-    background-image: linear-gradient(to top, rgb(255, 255, 255), transparent) , url("../imagenes/patron-1.png"); /*asi se pone color encima de la imagen pero procurando que sea transparente*/
+    /* background-image: linear-gradient(to top, rgb(255, 255, 255), transparent) , url("../imagenes/patron-1.png"); asi se pone color encima de la imagen pero procurando que sea transparente */
+    background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
     /* background-repeat: no-repeat; para que no se repita  */
     /* background-position: center; para que la imagen se centre  */
     /* background-size: cover; para que se estire sin que pierda la porpocion  */
     height: 350px;
+}
+
+.section-content img {
+    margin-block-start: 40px;
+    display: block; /*para representar un bloque y que los margenes colapsin*/
+    max-inline-size: 100%; /*para teer una performans increible a la hora de si la pagina se redimencionarse*/
+    /* max-width: 100%; propiedades physicos */
 }
 
 .section-content { /*https://www.w3.org/TR/CSS2/generate.html#counter-styles para mas info*/
@@ -92,7 +124,7 @@ pre {
 }
 /* a continuasion vamos a ver los seudoelementos mas im usados (se usa para dalre una buena vicualizacion"para que se vea bonico" lo agregamos aqui para no ponerlo en la frace porque no se debe leer) */
 .section-content h3::before {
-    content: counter(TitleList);
+    content: counter(TitleList, decimal)". ";
     
 }
 
@@ -101,10 +133,9 @@ pre {
     /* Rectangle 57 */
     width: 228px;
     height: 4px;
-    background: var(--gray20);
+    background: var(--white20);
     display: block;
     /* Inside auto layout */
-
     flex: none;
     order: 1;
     align-self: stretch;
@@ -112,16 +143,36 @@ pre {
     
 }
 
-
+blockquote {
+    margin-block-start: 80px;
+    margin-block-end: 63px;
+    background: var(--white30);
+    border-radius: 8px;
+}
 
 /* para cambiar el color cuando seleciones la un paragrafo en la web */
 /* ::selection { 
     background: green;
 } */
 
+.main hr { 
+    display: none; /*para hacer algo desaparecer*/
+}
 
+/* .main {
+    border: 1px solid red;
+} */
 
+.wrapper {
+    /* border: 1px solid blue; */
+    max-inline-size: 902px; /*para teer una performans increible a la hora de si la pagina se redimencionarse*/
+    margin: auto;
 
+}
+
+/* .main-content {
+    border: 1px solid yellow; 
+} */
 
 
 

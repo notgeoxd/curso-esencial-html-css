@@ -155,7 +155,8 @@ blockquote span::before {
 }
 
 .wrapper { /*tecnica del wrapper(para ajustar la caja de toda la web)*/
-    width: 902px; /**/
+    /* width: 902px;  */
+    max-width: 902px; /*(propiedades phyisicos)para teer una performans increible a la hora de si la pagina se redimencionarse*/
     margin: auto;
 }
 
@@ -215,6 +216,10 @@ blockquote span::before {
 }
 .section-content img {
     margin-top: 40px;
+    margin-block-start: 40px;
+    display: block; /*para representar un bloque y que los margenes colapsin*/
+    /* max-inline-size: 100%; para teer una performans increible a la hora de si la pagina se redimencionarse */
+    max-width: 100%; /* propiedades physicos */
 }
 
 .section-content { /*https://www.w3.org/TR/CSS2/generate.html#counter-styles para mas info*/
