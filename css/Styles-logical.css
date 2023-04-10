@@ -39,18 +39,45 @@ body {
     /*font-family: charted; cuidado con las fuentes que eligas, no todas estan dissponibles*/ 
 }
 
+html {
+    scroll-behavior: smooth; /*para que el scroll sea lento (le da un aire bonito)*/
+}
+
 a {
     color: var(--white40); 
 }
 
-header {
-    font-size: 14px;
-    color: var(--white40); /*para quita subrallado de algun texto*/
-    /* color: var(red); podemos cambiar una parte del texto espesificando el color que queremos */
+/*.header { /*invocar*/
+    /*position: sticky; /* para que jo lo posicione y para que se mueva con la pagina(requiere comando de inicializacion" inset-block-start: 0 o top: 0;" )*/
+    /*inset-block-start: -35px; /*para cuando hicieras scrol hacia abajo, no se quede tan arriba el bloque*/
+/*}*/
+
+.header-content {
+    padding-inline: 20px;
+    /*position: relative; /*relativo para que contenga los elemntos y hacer que salga de la caja (inset-inline-start: -188px;) */
+    /*inset-block-start: 65px; /*para que no este tan ariba del todo*/
 }
 
-header li {
+header { /*es el menu de la izquierda de la pagina*/
+    margin-block-start: 20px;
+    font-size: 14px;
+    color: var(--white40); /*cambiar color a los mini titulos y asin tambien quita subrallado de algun texto despues de hacer clic*/
+    /*position: absolute; /*para que este hacia arriba*/
+    /*inline-size: 188px; /*para darle un anchoa la caja contenedora */
+
+    /* top: ; */
+    /*inset-block-start: 0; /* equivale a top: ;*/
+    /* bottom: ; */
+    /* inset-block-end: ;  equivale a bottom: ;*/
+    /* left: ; */
+    /*inset-inline-start: -208px; /* equivale a left: ;*/
+    /* right: ; */
+    /* inset-inline-end: ; equivale a right: ;*/
+}
+
+header li { /*es la lista del menu de la izquierda de la pagina*/
     color: var(--white20);
+    margin-block-end: 16px; /*distancia entre las lineas de texto de la list*/
 }
 
 header a {
@@ -69,19 +96,23 @@ nav details summary {
     /* font-weight: normal; */
 /* } */
 
-h1 {
-    font-size: 60px;
-    margin-block-start: 64px;
+h1 { /*Titulo principal*/
+    font-size: 40px;
+
+    margin-block-start: 20px;
+    /* margin-top: 64px; vercion physicos*/
     margin-block-end: 16px;
-    /* font-size: 3.75px; */
+    /* margin-bottom: 16px; vercion physicos*/
+
+    /* text-align: start o end; para poner texto izquierda o derecha */
 }
 
-h2 {
+h2 { /*SubTitulo */
     font-size: 2em;
     margin-block: 40px;
 }
 
-h3 {
+h3 { /*letra grande */
     font-size: 1.5em;
     font-weight: 600;
     margin-block: 16px;
@@ -92,8 +123,25 @@ hr {
     border-color: var(--white10);
 }
 
-pre {
-    background: var(--white30);
+pre { /*secion que creamos para escribir html en html*/
+    background: var(--white10);
+    padding: 40px; /*el padding crea un espacio (arriba, abajo,derecha y izquierda)*/
+    overflow: auto; /*comando que dice que si algo se 'desborda' se crea un scrol orizontal dentro de la caja*/
+    box-shadow: -10px 10px 0 0 #ABAAF6; /*hace como una sobra de la caja*/
+    margin-block-end: 30px; /*deja un margen entre bloques (exteriores)*/
+    /*border-left: 10px solid #5551FF;*/ /*en el caso de valores physicos*/
+
+    /*border: 10px solid #5551FF; */ /*modifica el grosor del borde y el color como los comandos de abajo*/
+    border-inline-start: 10px solid #5551FF; /*{border-left} pero en logicos*/
+    border-block-end: 10px solid #5551FF; /* modificar borde abajo*/
+    border-inline-end: 10px solid #5551FF; /*modificar borde de izquierda*/
+    border-block-start: 10px solid #5551FF; /*modificar borde de arriba*/
+
+    /*border-radius: 8px; */ /*redondea el bloque cuadrado en valores physicos*/
+    border-start-start-radius: 8px; /*Modifica la esquina izquierda arriba*/
+    border-start-end-radius: 8px; /*Modifica la esquina izquierda abajo*/
+    border-end-end-radius: 8px; /*Modifica la esquina derecha abajo*/
+    border-end-start-radius: 8px; /*Modifica la esquina derecha arriba*/
 }
 
 p {
@@ -106,7 +154,8 @@ p {
     /* background-repeat: no-repeat; para que no se repita  */
     /* background-position: center; para que la imagen se centre  */
     /* background-size: cover; para que se estire sin que pierda la porpocion  */
-    height: 350px;
+    block-size: 120px;
+
 }
 
 .section-content img {
@@ -122,32 +171,30 @@ p {
 .section-content h3 {
     counter-increment: TitleList;
 }
-/* a continuasion vamos a ver los seudoelementos mas im usados (se usa para dalre una buena vicualizacion"para que se vea bonico" lo agregamos aqui para no ponerlo en la frace porque no se debe leer) */
+
+/* a continuasion vamos a ver los seudoelementos mas usados (se usa para dalre una buena vicualizacion"para que se vea bonico" lo agregamos aqui para no ponerlo en la frace porque no se debe leer) ejemplo; enmeraciones */
 .section-content h3::before {
     content: counter(TitleList, decimal)". ";
     
 }
 
-.section-content h3::after{
-    content: "";
-    /* Rectangle 57 */
-    width: 228px;
-    height: 4px;
-    background: var(--white20);
-    display: block;
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-    
+
+blockquote { /*secion que creamos en html para separar un texto del resto*/
+    margin-block-start: 80px; /*hace un hueco entr el bloque de arriba i el*/
+    margin-block-end: 63px;  /*hace un hueco entr el bloque de abajo i el */
+    background-color: var(--white10);
+    border-radius: 8px; /*hace una curba en el borde*/
+    line-height: 32px; /*espacio entre letras */
+    font-size: 24px; /*tamaño de fuente de letra*/
+    /* padding: 24px; */ /*el padding hace todo lo anterior*/
+    padding-inline-end: 24px; /*hacer un hueco derecha*/
+    padding-inline-start: 24px; /*hacer un hueco izquierda*/
+    padding-block-start: 24px; /*hacer un hueco arriba*/
+    padding-block-end: 24px; /*hacer un hueco abacjo*/
 }
 
-blockquote {
-    margin-block-start: 80px;
-    margin-block-end: 63px;
-    background: var(--white30);
-    border-radius: 8px;
+blockquote p { /*se crea 'blockquote p' por separado porque la 'p' esta dentro de 'blockquote'*/
+    color: var(--white40); /*color a la letra de 'p' (parafo)*/
 }
 
 /* para cambiar el color cuando seleciones la un paragrafo en la web */
@@ -170,23 +217,110 @@ blockquote {
 
 }
 
-/* .main-content {
-    border: 1px solid yellow; 
+.main-content {
+    padding-inline: 16px;
+}
+
+.main-content img {
+    margin-block-start: 40px;
+    display: block; /*para representar un bloque y que los margenes colapsin*/
+    max-inline-size: 100%; /*para teer una performans increible a la hora de si la pagina se redimencionarse*/
+    /* max-width: 100%; propiedades physicos */
+}
+
+/* .slider { el slider es com una *diapositiva* o *deslizar* */
+    /* border: 3px solid salmon; */
+/* } */
+.slider-container { /*lo que tiene dentro del slider*/
+    /* block-size: 100px; para darle un alt al contenido */
+    display: block; /*por defecto es un elemento en linea, asi que lo cambiamos a elemento de bloque*/
+    overflow: auto; /*comando que dice que si algo se 'desborda' se crea un scrol orizontal dentro de la caja*/
+    scroll-behavior: smooth; /*scroll (suave animado)*/
+    white-space: nowrap; /*ayuda al comando de {display: inline-block;} en .slider-slide h1 */
+    font-size: 0; /*para ajuntar el espacio que hay por defecto*/
+}
+
+/* .slider-slide h1 { 
+    margin: 0;
+    border: 3px solid rgb(114, 218, 250);
+    display: inline-block; poner un elemento al costado del otro (con inline-block conbina el fator de tener un factor al lado del otro y conbina tener el padding y tener ancho y alto )
+    width: 100%;
 } */
+.video { /*es asi como el deslizador (remplazamos .slider-slide h1)*/
+    margin: 0;
+    display: inline-block; /*poner un elemento al costado del otro (con inline-block conbina el fator de tener un factor al lado del otro y conbina tener el padding y tener ancho y alto )*/
+    width: 100%; /*ampliar un 100%*/ 
+    height: auto; /*alto*/
+    aspect-ratio: 16/9;
+}
+
+.slider-bullet-list { /*esto es la lista de los puntitos (o nuemros)*/
+    text-align: center;  /*para centrar */
+    margin-block-start: 10px;
+}
+
+.slider-bullet { /*para darle estilos a los bullet (pelotitas en vez de los numeros)*/
+    display: inline-block; /*por defecto los elementos ancla son elemesntos inlne(asi que mejor pongamos el comando inline-block)*/
+    inline-size: 15px; /*para acompañar a inline-block*/
+    block-size: 15px; /*para acompañar a inline-block*/
+    background-color: white; /*darle color a las pelotas*/
+    border-radius: 50%; /*para hacerlo redondeado*/
+}
+
+.form input {
+    inline-size: 100%; /*para que ocupe toda la pagina de */
+    box-sizing: border-box; /*para se centre en la pagina y no se salga caundo hacemos la pagina mas chiquita*/
+    color: var(--white40); /*color de texto*/
+    font-size: 16px; /*tamaño de la fuente*/
+    border: 1px solid var(--white40);
+    background-color: #251F24;
+    border-radius: 8px;
+    padding-inline: 16px; /*espaciado entre el texto y el borde*/
+    padding-block: 12px;
+    display: block; /*van a tener margin colapsin*/
+    margin-block-end: 24px; /*marguen entre ellos*/
+}
+
+.form input:-ms-input-placeholder { /*seudoelemento*/
+    color: var(--white20); /*para acambiar color de texcto de dentro de input(Nombre y correo electronico)*/
+}
+
+.form input[type="submit"] { /*esto es el boton*/
+    background: #157EFB; 
+    border: none; /*quitar borde*/
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (min-width: 1366px) { /*se cumple la condicion solo si es mas grande que los px que pongamos osea si estamos en un monitor |(min-width: 700px) piensa en los mobiles primero y (max-width: 700px) en los dispositibos grandes*/
+    .hero {
+        block-size: 350px;
+    }
+    .header { /*invocar*/
+        position: sticky; /* para que jo lo posicione y para que se mueva con la pagina(requiere comando de inicializacion" inset-block-start: 0 o top: 0;" )*/
+        inset-block-start: -35px; /*para cuando hicieras scrol hacia abajo, no se quede tan arriba el bloque*/
+    }
+    .header-content {
+        padding-inline: 0px;
+        position: relative; /*relativo para que contenga los elemntos y hacer que salga de la caja (inset-inline-start: -188px;) */
+        inset-block-start: 65px; /*para que no este tan ariba del todo*/
+    }
+    header { /*es el menu de la izquierda de la pagina*/
+        font-size: 14px;
+        color: var(--white40); /*cambiar color a los mini titulos y asin tambien quita subrallado de algun texto despues de hacer clic*/
+        position: absolute; /*para que este hacia arriba*/
+        inline-size: 188px; /*para darle un anchoa la caja contenedora */
+    
+        /* top: ; */
+        /*inset-block-start: 0; /* equivale a top: ;*/
+        /* bottom: ; */
+        /* inset-block-end: ;  equivale a bottom: ;*/
+        /* left: ; */
+        inset-inline-start: -208px; /* equivale a left: ;*/
+        /* right: ; */
+        /* inset-inline-end: ; equivale a right: ;*/
+    }
+    h1 { /*Titulo principal*/
+        font-size: 60px;
+        margin-block-start: 64px;
+    }
+}

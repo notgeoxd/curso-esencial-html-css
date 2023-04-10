@@ -32,8 +32,8 @@
 }
 
 html {
-    scroll-behavior: smooth;
-    }
+    scroll-behavior: smooth; /*para que el scroll sea lento (le da un aire bonito)*/
+}
 
 
 body {
@@ -47,11 +47,20 @@ a {
     color: var(--gray40); 
 }
 
-header {
+.header { /*invocar*/
+    position: sticky;
+    top: 0;
+}
+
+.header-content {
+position: relative; /*relativo para que contenga los elemntos y hacer que salga de la caja (inset-inline-start: -188px;) */
+}
+
+header { /*es el menu de la izquierda de la pagina*/
     font-size: 14px;
     width: 188px;
-    color: var(--gray10); /*para quita subrallado de algun texto*/
-    position: absolute;
+    color: var(--gray10); /*cambiar color a los mini titulos y asin tambien quita subrallado de algun texto despues de hacer clic*/
+    position: absolute; /*para que este hacia arriba*/
     top: 64px;
     left: -232px;
     z-index: 1;
@@ -85,6 +94,8 @@ h1 {
     margin-top: 64px;
     margin-bottom: 16px;
     font-weight: normal;
+
+    /* text-align: right o left; para poner texto izquierda o derecha */
     /* width: ; /*darle el tamaño que quiera de longitud*/
     /* height: ; darle el tamaño que quiera de altura */
     /* padding: ; darle el tamaño que quiera dentro de la caja/ */
@@ -141,18 +152,10 @@ blockquote span {
 blockquote span::before {
     content: "-";
 }
-.header {
-    position: sticky;
-    top: 0;
-}
 
-.header-content {
-    position: relative;
-}
-
-.main {
+/* .main { */
     /* background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/pattern.png'); */
-}
+/* } */
 
 .wrapper { /*tecnica del wrapper(para ajustar la caja de toda la web)*/
     /* width: 902px;  */
@@ -235,17 +238,19 @@ blockquote span::before {
     
 }
 
-.section-content h3::after{
+.section-content h3::after{  /*para poner una ralla debajo de los tetos(titulos)*/
     content: "";
-    width: 80px;
+    /* Rectangle 57 */
+    width: 228px;
     height: 4px;
-    background: var(--gray20);
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-
-}
+    background: var(--white20);
+    display: block;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0; 
+} 
 
 
 

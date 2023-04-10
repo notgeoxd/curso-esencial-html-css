@@ -16,7 +16,7 @@
     <body>
         <div class="hero"></div> <!--para crear un background-->
         
-        <div class="header">
+        <div class="header"> 
             <div class="wrapper">
                 <div class="header-content">
                     <header> <!-- <header> es igual a cabezera -->
@@ -54,9 +54,8 @@
                 </div>
             </div>
         </div>
+
         <main class="main"> <!-- contenedo para html -->
-
-
             <div class="wrapper">
                 <div class="main-content">
                     <h1>
@@ -93,7 +92,7 @@
                             <img src="./imagenes/GitHub.png" alt="Logo de GitHub" title="Logo de GitHub">
                             <h3 id="GitHub">GitHub</h3>
                             <p>Así como en Facebook te encuentran tus amigos, en Github te encuentran otras programadoras y programadores de todo el mundo, en vez de subir fotos de tus viajes aquí subes tu código y puedes elegir hacerlo “open source” o guardarlo de manera privada, Github será esencial para almacenar tu futuro portafolio.</p>
-                        <blockquote> 
+                        <blockquote> <!--Crea una secion aparte para usar en css por separado de los 'p' normales-->
                             <p>
                                 “Este es el inicio de tu carrera como Desarrollador Web”
                             </p>
@@ -165,12 +164,43 @@
                             <li>padding-block | padding-inline | padding-block-start | padding-block-end | padding-inline-start | padding-inline-end</li>
                         </ul>
                     </section>
-                    <h3>Modelo de caja</h3>
-                    <img src="./imagenes/foto_del_profe.png" alt="Modelo de caja" title="Este es nuestro profesor">
+
+                    <div class="section-content"> <!--nueva seccion-->
+                        <h2>Modelo de caja</h2> <!--titulo-->
+                        <div class="slider"> <!--elemento que tiene la clase slider que sera nuestro componente (el slider es com una *diapositiva* o *deslizar*)-->
+                            <scroll-container class="slider-container"> <!--contenidor de los sliders-->
+                                <scroll-page class="slider-slide" id="video-1"> <!--como slide 1 , slide 2...-->
+                                    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </scroll-page>
+                                <scroll-page class="slider-slide" id="video-2">
+                                    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/Nbd8MSXVcFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </scroll-page>
+                                <scroll-page class="slider-slide" id="video-3">
+                                    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/uMCSdgkdOJc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </scroll-page>
+                            </scroll-container>
+                                <div class="slider-bullet-list">
+                                    <a href="#video-1" class="slider-bullet"> <!--se puede poner numeros para que se a mas facil 1--> </a> 
+                                    <a href="#video-2" class="slider-bullet"> <!--se puede poner numeros para que se a mas facil 2--> </a>
+                                    <a href="#video-3" class="slider-bullet"> <!--se puede poner numeros para que se a mas facil 3--> </a>
+                                </div>
+                        </div>
+                    </div>
+
                     <p>
                         Si tienes alguna pregunta escríbeme a 
                         <a href="mailto:b.george.geoo@gmail.com">b.george.geoo@gmail.com</a>
                     </p>
+                    <div class="section-content"> <!--nueva seccion-->
+                        <h2>Ingresa a nuestro newsletter</h2>
+                        <form action="#" class="form"> <!--etiqueta base para formurario-->
+                            <input type="text" required placeholder="Nombre"> <!--para poder escribir dentro de la pagina en el formurario-->
+                            <input type="email" required placeholder="Correo Elecronico"> <!--para poder escribir dentro de la pagina en el formurario-->
+                            <input type="submit" value="Suscribeme"> <!--y crea un boton-->
+                            <!-- pagina de documentacionextra con esto https://developer.mozilla.org/es/docs/Learn/Forms/Your_first_form -->
+                        </form> 
+                    </div>
+
                 </div>
             </div>
         </main>
