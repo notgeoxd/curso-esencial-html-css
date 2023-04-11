@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/Styles-nemium.d.css"> <!--para linkear una hoja de estilos de CSS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> <!--https://fonts.google.com-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- para poner una fuente de internet-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&family=Roboto&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+        <title>El Blog de geo</title>
+<!--para mas detalle al compartir la web-->
+        <meta property="og:title" content="Mi proyecto del curso esencial ede HTML y CSS" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="Todo lo que necesitas saber en tu dia a dia como Frontred" />
+        <meta property="og:url" content="https://notgeoxd.github.io/curso-esencial-html-css/" />
+        <meta property="og:image" content="https://notgeoxd.github.io/curso-esencial-html-css/imagenes/dom.png" />
+<!--icono-->
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+        <link rel="manifest" href="./favicon/site.webmanifest">
+    </head>
+    <body>
+        <div class="hero"></div> <!--para crear un background-->
+        
+        <div class="header"> 
+            <div class="wrapper">
+                <div class="header-content">
+                    <header> <!-- <header> es igual a cabezera -->
+                        <nav> <!-- <nav> es una navegacion (visualmente no es nada pero si lo inspecionamos es una semantica mejor)-->
+                            <details open> <!-- details para hacer menu desplegable-->
+                                <summary>
+                                    Setup
+                                </summary> 
+                                <ol> <!-- <ol> significa ordener list(enumera una lista con numeros 1. 2. etc)  -->
+                                    <!-- <ul> es urdenet list que es lo mismo pero con puntos, no con numeros-->
+                                    <li> <!-- <li> item list o elemento de lista, declara uno de los elementos de una lista-->
+                                        <a href="#Google_Chrome">Google Chrome</a>
+                                        <!-- href= hace scrol a la pagina hasta la linea que le ponel el id -->
+                                        </li>
+                                        <li><a href="#Visual_Studio_Code">Visual Studio Code</a></li>
+                                        <li><a href="#Figma">Figma</a></li>
+                                        <li><a href="#GitHub">GitHub</a></li>
+                                </ol>              
+                            </details>
+                            <details>
+                                <summary>
+                                    Conceptos esenciales del Desarrollo Web
+                                </summary>
+                                <ol>
+                                    <li><a href="#Qué_es_HTML">Qué es HTML</a></li>
+                                    <li><a href="#Etiquetas">Etiquetas</a></li>
+                                    <li><a href="#DOM">DOM</a></li>
+                                    <li><a href="#Atributos">Atributos</a></li>
+                                    <li><a href="#Semántica">Semántica</a></li>
+                                    <li><a href="#CSS">Qué es CSS</a></li>
+                                </ol>
+                            </details>
+                        </nav>
+                    </header> 
+                </div>
+            </div>
+        </div>
+
+        <main class="main"> <!-- contenedo para html -->
+            <div class="wrapper">
+                <div class="main-content">
+                    <h1>
+                            Curso esencial de HTML y CSS
+                            <!--<h1> Representa el mensaje mas importante de la web </h1>-->
+                            <!--existen muchas mas etiquetas va de la h1-h6 y se ve de grande a pequeño
+                        mas que al navegador usa palabras clave para el <h1> 
+                        (el titulo i subtitulo importa para que 
+                        salgan mas rapido en el buscador de google)-->
+                    </h1>
+                    <p>
+                        <!-- pueden haver mill parrafos -->
+                        Este es el inicio de tu carrera como Desarrollador Web, 
+                        empezarás aprendiendo HTML y CSS para la creación de contenidos, 
+                        en el nivel 2 aprenderás de componentes y en 3 sobre layouts.
+                    </p>
+        
+                    <hr>
+        
+                    <section class="section-content">
+                        <h2>Setup</h2>
+                        <img src="./imagenes/Google_Chrome.png" alt="Logo de Google Chrom" title="Logo de Google Chrom">
+                            <!--"atributo" src= url de una imagen-->
+                            <!--"atributo" alt= descripcion previa por si no carega la imagen-->
+                            <!--"atributo" title= una descripcion que aparece cuando dejas el raton encima de una imagen-->
+                            <h3 id="Google_Chrome" >Google Chrome</h3>
+                            <p>Chrome va a ser el navegador que utilizaremos en el curso por su extenso soporte de nuevos estándares y herramientas de desarrollo avanzadas y de amigable uso.</p>
+                            <img src="./imagenes/Visual_Studio_Code.png" alt="Logo de Visual Studio Code" title="Logo de Visual Studio Code">
+                            <h3 id="Visual_Studio_Code">Visual Studio Code</h3>
+                            <p>Visual Studio Code es el editor de texto más popular y potente del mercado actualmente, su fácil uso y la capacidad de extenderlo por medio de plugins lo hace el complemento perfecto para cualquier programador sin importar el lenguaje en el que se desemvuelva.</p>
+                            <img src="./imagenes/Figma.png" alt="Logo de Figma" title="Logo de Figma">
+                            <h3 id="Figma">Figma</h3>
+                            <p>Figma es una la herramienta más popular en la actualidad para entregar diseños a los desarrolladores para su implementación por su fácil uso porque puede ser usado directamente desde el navegador.</p>
+                            <img src="./imagenes/GitHub.png" alt="Logo de GitHub" title="Logo de GitHub">
+                            <h3 id="GitHub">GitHub</h3>
+                            <p>Así como en Facebook te encuentran tus amigos, en Github te encuentran otras programadoras y programadores de todo el mundo, en vez de subir fotos de tus viajes aquí subes tu código y puedes elegir hacerlo “open source” o guardarlo de manera privada, Github será esencial para almacenar tu futuro portafolio.</p>
+                        <blockquote> <!--Crea una secion aparte para usar en css por separado de los 'p' normales-->
+                            <p>
+                                “Este es el inicio de tu carrera como Desarrollador Web”
+                            </p>
+                            <p>
+                                <span>
+                                    Leonidas Esteban
+                                </span>
+                            </p>
+                        </blockquote>
+                    </section>
+        
+                    <hr> <!-- <hr> es una line que separan las secciones  -->
+        
+                    <section class="section-content">
+                        <h2>Conceptos esenciales del Desarrollo Web</h2>
+                        <h3 id="Qué_es_HTML">Qué es HTML</h3>
+                        <p>Hyper Text Markup Language o Lenguaje de marcas Hipertexto. Es el componente más básico de la web. Define el significado y la estructura del contenido.const name = 'your name' </p>
+                        <!-- <p><code> hola </code> con esto puedes escribir codigo dentro de un parafo </p> -->
+                        <pre> <!--cunado quieres ocupar toda una haria con codigo (tambien inclue los espacios literalmente)--> <!-- https://www.freeformatter.com/html-escape.html#before-output (escapar HTML) -->
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+                        </pre>
+                        <h3 id="Etiquetas">Etiquetas</h3>
+                        <p>Las etiquetas HTML van a ayudarnos a brindar una estructura y semántica al contenido de nuestro website y cada una tiene características y usos diferentes aunque visualmente den un resultado similar.</p>
+                        <p>Muchas etiquetas son fácil de diferencias como los headings o las imágenes y otras diferentes como header, footer, section o div, aquí es donde la semántica será la respuesta y si sabemos un poco de inglés también podremos darnos una pequeña idea de su uso pero en este curso vamos a usar las más importantes y que serán parte de tu día a día como Software Developer.</p>
+                        <h3 id="DOM">DOM</h3>
+                        <p>El Document Object Model es una estructura de árbol que representará todos nuestros proyectos web como si un árbol genealógico fuera: padres, hijos, hermanos con niveles infinitos. cuando entendemos esta anidación podemos identificar dependencias, herencias en css y que tan complejo es nuestro proyecto.</p>
+                        <img src="./imagenes/dom.png" alt="Estructura de arbol que representa al DOM (Document Object Model)" title="Document Object Model">
+                        <h3 id="Semántica">Semántica</h3>
+                        <p>La semántica le brinda sentido a cada elemento existen en un sitio web, algunos elementos será meramente decorativos y no deben significar nada pero otros serán títulos y deberán estar en diferente jerarquías o alguna secciones serán más relevantes que otras, esto ayudará a los motores de búsqueda como Google o Duck Duck Go a diferenciar tu contenido, categorizar y será la herramientas más valiosa para estar en los primeros resultados de búsqueda SEO. También ayudará a la accesibilidad de tu sitio web, para que personas con habilidades diferentes puedan entender cada contenido.</p>
+                        <h3 id="Atributos">Atributos</h3>
+                        <p>Los atributos le dan características extra a las etiquetas para complementar información y son pre programadas por el navegador, algunos atributos funcionan en todas las etiquetas de la misma forma como ‘class’ pero otros atributos funcionan en solo alguna etiquetas como src</p>
+                        <h3 id="CSS">CSS</h3>
+                        <p>Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o CSS es el lenguaje de estilos utilizado para describir la presentación de documentos HTML</p>
+                        <img src="./imagenes/Imagen_CSS.png" alt="imagen de diseño CSS" title="imagen de diseño CSS">
+                    </section>
+                    <section class="section-content2">
+                        <h2>Modelo de caja</h2>
+                        <h3>El modelo de caja está compuesto por:</h3>
+                        <p>Chrome va a ser el navegador que utilizaremos en el curso por su extenso soporte de nuevos estándares y herramientas de desarrollo avanzadas y de amigable uso.</p>
+                        <ol>
+                            <li>Tamaño del del contenido / ancho y alto</li>
+                            <li>Padding / Relleno</li>
+                            <li>Border / Bordes</li>
+                            <li>argin / Márgenes</li>
+                        </ol>
+                        <h3>Propiedades físicas para el modelo de caja:</h3>
+                        <ul>
+                            <li>width / height</li>
+                            <li>margin / margin-top | margin-right | margin-bottom | margin-left</li>
+                            <li>border / border-top | border-right | border-bottom | border-left</li>
+                            <li>padding / padding-top | padding-right | padding-bottom | padding-left</li>
+                        </ul>
+                        <h3>Propiedades lógicas para el modelo de caja:</h3>
+                        <ul>
+                            <li>inline-size / block-size</li>
+                            <li>margin-block | margin-inline | margin-block-start | margin-block-end | margin-inline-start | margin-inline-end</li>
+                            <li>border-block | border-inline | border-block-start | border-block-end | border-inline-start | border-inline-end</li>
+                            <li>padding-block | padding-inline | padding-block-start | padding-block-end | padding-inline-start | padding-inline-end</li>
+                        </ul>
+                    </section>
+
+                    <div class="section-content"> <!--nueva seccion-->
+                        <h2>Modelo de caja</h2> <!--titulo-->
+                        <div class="slider"> <!--elemento que tiene la clase slider que sera nuestro componente (el slider es com una *diapositiva* o *deslizar*)-->
+                            <scroll-container class="slider-container"> <!--contenidor de los sliders-->
+                                <scroll-page class="slider-slide" id="video-1"> <!--como slide 1 , slide 2...-->
+                                    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </scroll-page>
+                                <scroll-page class="slider-slide" id="video-2">
+                                    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/Nbd8MSXVcFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </scroll-page>
+                                <scroll-page class="slider-slide" id="video-3">
+                                    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/uMCSdgkdOJc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </scroll-page>
+                            </scroll-container>
+                                <div class="slider-bullet-list">
+                                    <a href="#video-1" class="slider-bullet"> <!--se puede poner numeros para que se a mas facil 1--> </a> 
+                                    <a href="#video-2" class="slider-bullet"> <!--se puede poner numeros para que se a mas facil 2--> </a>
+                                    <a href="#video-3" class="slider-bullet"> <!--se puede poner numeros para que se a mas facil 3--> </a>
+                                </div>
+                        </div>
+                    </div>
+
+                    <p>
+                        Si tienes alguna pregunta escríbeme a 
+                        <a href="mailto:b.george.geoo@gmail.com">b.george.geoo@gmail.com</a>
+                    </p>
+                    <div class="section-content">
+                        <h2>Ingresa a nuestro newsletter</h2>
+                        <form action="#" class="form" style="display: flex; flex-wrap: wrap;"> <!--Aplica la propiedad display y flex-wrap al formulario-->
+                            <div style="display: flex; flex-wrap: wrap; align-items: baseline; width: 100%;"> <!--Crea un contenedor adicional y aplica las propiedades flex, align-items y width-->
+                                <input type="text" required placeholder="Nombre" style="flex: 1; margin-right: 8px;"> <!--Aplica la propiedad flex y un margen derecho para separar los elementos-->
+                                <input type="email" required placeholder="Correo Electrónico" style="flex: 1; margin-right: 8px;"> <!--Aplica la propiedad flex y un margen derecho para separar los elementos-->
+                                <input type="submit" value="Suscribirme" "> <!--Aplica los estilos al botón-->
+                            </div>
+                        </form>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </main>
+        <script> /*script de JavaScript para animar listas(cuano das clic en una se cierra la otra)*/
+            const $detailsList = document.querySelectorAll("details")
+            $detailsList.forEach(($details) => {
+                $details.querySelector("summary").addEventListener("click",expand)
+            })
+            function expand() {
+                $detailsList.forEach(($details) => {
+                    $details.removeAttribute("open")
+                })
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,358 @@
+@font-face { /*para poner una fuente en la pagina des de nuestros documentos */
+    font-family: charted;
+    src: url(../fonts/fonts/charter-regular.otf);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face { 
+    font-family: charted;
+    src: url(../fonts/fonts/charter-italic.otf);
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face { 
+    font-family: charted;
+    src: url(../fonts/fonts/charter-bold.otf);
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face { 
+    font-family: charted;
+    src: url(../fonts/fonts/charter-bold-italic.otf);
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root { /*para que sea mas facil poner colores a mas paginas*/
+    font-size: 18px;
+    --black: #000001; /*h1*/
+    --gris: rgba(84, 84, 84, 1); /*p*/
+    --purpura: #5551FF; /*puntitos*/
+    --white: #ffffff; /*fondo*/
+}
+
+body {
+    color: var(--black); 
+    font-family: 'Rubik', sans-serif;
+    background: #ffffff;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth; /*para que el scroll sea lento (le da un aire bonito)*/
+}
+
+a {
+    color: var(--black); 
+}
+
+/*.header { /*invocar*/
+    /*position: sticky; /* para que jo lo posicione y para que se mueva con la pagina(requiere comando de inicializacion" inset-block-start: 0 o top: 0;" )*/
+    /*inset-block-start: -35px; /*para cuando hicieras scrol hacia abajo, no se quede tan arriba el bloque*/
+/*}*/
+
+.header-content {
+    padding-inline: 20px;
+    /*position: relative; /*relativo para que contenga los elemntos y hacer que salga de la caja (inset-inline-start: -188px;) */
+    /*inset-block-start: 65px; /*para que no este tan ariba del todo*/
+}
+
+header { /*es el menu de la izquierda de la pagina*/
+    margin-block-start: 20px;
+    font-size: 14px;
+    color: var(--black); /*cambiar color a los mini titulos y asin tambien quita subrallado de algun texto despues de hacer clic*/
+    /*position: absolute; /*para que este hacia arriba*/
+    inline-size: 328px; /*para darle un anchoa la caja contenedora */
+    block-size: 250px;
+
+    /* top: ; */
+    /*inset-block-start: 0; /* equivale a top: ;*/
+    /* bottom: ; */
+    /* inset-block-end: ;  equivale a bottom: ;*/
+    /* left: ; */
+    /*inset-inline-start: -208px; /* equivale a left: ;*/
+    /* right: ; */
+    /* inset-inline-end: ; equivale a right: ;*/
+}
+
+header li { /*es la lista del menu de la izquierda de la pagina*/
+    color: var(--black);
+    margin-block-end: 16px; /*distancia entre las lineas de texto de la list*/
+    
+}
+
+header a {
+    color: var(--black);
+    text-decoration: none;
+    padding-block-start: 12px; /*hacer un hueco arriba*/
+    padding-block-end: 12px; 
+    display: block; 
+    max-inline-size: 100%;
+}
+header a:hover { /*cambiar el color al texto caundo el raton esta encima*/
+    color: var(--white);
+    background-color: var(--purpura);
+}
+
+nav details summary {
+    font-weight: bold; /*Poner el texto en negrita*/
+}
+
+/* h1, h2, h3 { */
+    /* font-weight: normal; */
+    /* } */
+
+p {
+    color: var(--gris);
+    font-size: 16px;
+}
+
+h1 { /*Titulo principal*/
+    font-size: 28px;
+    margin-block-start: 130px;
+    /* margin-top: 64px; vercion physicos*/
+    margin-block-end: 16px;
+    font-weight: 700;
+    /* margin-bottom: 16px; vercion physicos*/
+    /* text-align: start o end; para poner texto izquierda o derecha */
+}
+
+h2 { /*SubTitulo */
+    font-size: 32px;
+    font-weight: 400;
+    margin-block: 40px;
+}
+
+h3 { /*letra grande */
+    font-size: 22px;
+    font-weight: 400;
+    margin-block: 16px;
+}
+
+hr {
+    margin-block: 40px;
+    border-color: var(--white);
+}
+
+blockquote { /*secion que creamos en html para separar un texto del resto*/
+    margin-block-start: 64px; /*hace un hueco entr el bloque de arriba i el*/
+    margin-block-end: 64px;  /*hace un hueco entr el bloque de abajo i el */
+    line-height: 30px; /*espacio entre letras */
+    font-size: 16px; /*tamaño de fuente de letra*/ 
+    /* padding: 24px; */ /*el padding hace todo lo anterior*/
+    padding-inline-end: 24px; /*hacer un hueco derecha*/
+    padding-inline-start: 16px; /*hacer un hueco izquierda*/
+    padding-block-start: px; /*hacer un hueco arriba*/
+    padding-block-end: px; /*hacer un hueco abacjo*/
+    border-inline-start: 4px solid #5551FF;
+}
+
+blockquote p { /*se crea 'blockquote p' por separado porque la 'p' esta dentro de 'blockquote'*/
+    color: var(--black); /*color a la letra de 'p' (parafo)*/
+    font-size: 16px; /*tamaño de fuente de letra*/ 
+    text-align: left;
+}
+
+
+pre { /*secion que creamos para escribir html en html*/
+    background: var(--white);
+    text-align: left;
+    padding: 40px; /*el padding crea un espacio (arriba, abajo,derecha y izquierda)*/
+    overflow: auto; /*comando que dice que si algo se 'desborda' se crea un scrol orizontal dentro de la caja*/
+    box-shadow: -10px 10px 0 0 #ABAAF6; /*hace como una sobra de la caja*/
+    margin-block-end: 30px; /*deja un margen entre bloques (exteriores)*/
+    /*border-left: 10px solid #5551FF;*/ /*en el caso de valores physicos*/
+
+    /*border: 10px solid #5551FF; */ /*modifica el grosor del borde y el color como los comandos de abajo*/
+    border-inline-start: 10px solid rgba(85, 81, 255, 1); /*{border-left} pero en logicos*/
+    border-block-end: 10px solid rgba(85, 81, 255, 1); /* modificar borde abajo*/
+    border-inline-end: 10px solid rgba(85, 81, 255, 1); /*modificar borde de izquierda*/
+    border-block-start: 10px solid rgba(85, 81, 255, 1); /*modificar borde de arriba*/
+
+    /*border-radius: 8px; */ /*redondea el bloque cuadrado en valores physicos*/
+    border-start-start-radius: 8px; /*Modifica la esquina izquierda arriba*/
+    border-start-end-radius: 8px; /*Modifica la esquina izquierda abajo*/
+    border-end-end-radius: 8px; /*Modifica la esquina derecha abajo*/
+    border-end-start-radius: 8px; /*Modifica la esquina derecha arriba*/
+    font-size: 16px;
+}
+
+
+.hero {
+    background: linear-gradient(96.07deg, rgba(74, 0, 224, 0.6) 30.63%, rgba(142, 45, 226, 0.5) 102.18%), url("../imagenes/patron.png");
+    /* background-repeat: no-repeat; para que no se repita  */
+    /* background-position: center; para que la imagen se centre  */
+    /* background-size: cover; para que se estire sin que pierda la porpocion  */
+    block-size: 120px;
+
+}
+
+.section-content img {
+    margin-block-start: 40px;
+    display: block; /*para representar un bloque y que los margenes colapsin*/
+    max-inline-size: 100%; /*para teer una performans increible a la hora de si la pagina se redimencionarse*/
+    /* max-width: 100%; propiedades physicos */
+}
+
+.section-content2 {
+    text-align: left;
+}
+
+
+.section-content { /*https://www.w3.org/TR/CSS2/generate.html#counter-styles para mas info*/
+    counter-reset: TitleList;
+    text-align: center;
+}
+.section-content h3 {
+    counter-increment: TitleList;
+}
+
+/* a continuasion vamos a ver los seudoelementos mas usados (se usa para dalre una buena vicualizacion"para que se vea bonico" lo agregamos aqui para no ponerlo en la frace porque no se debe leer) ejemplo; enmeraciones */
+.section-content h3::before {
+    content: counter(TitleList, decimal)". ";
+}
+
+
+
+/* para cambiar el color cuando seleciones la un paragrafo en la web */
+/* ::selection { 
+    background: green;
+} */
+
+.main hr { 
+    display: none; /*para hacer algo desaparecer*/
+}
+
+/* .main {
+    border: 1px solid red;
+} */
+
+.wrapper {
+    /* border: 1px solid blue; */
+    max-inline-size: 902px; /*para teer una performans increible a la hora de si la pagina se redimencionarse*/
+    margin: auto;
+
+}
+
+.main-content {
+    padding-inline: 16px;
+    text-align: center;
+}
+
+.main-content img {
+    margin: 0 auto;
+    margin-block-start: 40px;
+    display: block; 
+    max-inline-size: 100%; 
+}
+
+/* .slider { el slider es com una *diapositiva* o *deslizar* */
+    /* border: 3px solid salmon; */
+/* } */
+.slider-container { /*lo que tiene dentro del slider*/
+    /* block-size: 100px; para darle un alt al contenido */
+    display: block; /*por defecto es un elemento en linea, asi que lo cambiamos a elemento de bloque*/
+    overflow: auto; /*comando que dice que si algo se 'desborda' se crea un scrol orizontal dentro de la caja*/
+    scroll-behavior: smooth; /*scroll (suave animado)*/
+    white-space: nowrap; /*ayuda al comando de {display: inline-block;} en .slider-slide h1 */
+    font-size: 0; /*para ajuntar el espacio que hay por defecto*/
+}
+
+/* .slider-slide h1 { 
+    margin: 0;
+    border: 3px solid rgb(114, 218, 250);
+    display: inline-block; poner un elemento al costado del otro (con inline-block conbina el fator de tener un factor al lado del otro y conbina tener el padding y tener ancho y alto )
+    width: 100%;
+} */
+.video { /*es asi como el deslizador (remplazamos .slider-slide h1)*/
+    margin: 0;
+    display: inline-block; /*poner un elemento al costado del otro (con inline-block conbina el fator de tener un factor al lado del otro y conbina tener el padding y tener ancho y alto )*/
+    width: 100%; /*ampliar un 100%*/ 
+    height: auto; /*alto*/
+    aspect-ratio: 16/9;
+}
+
+.slider-bullet-list { /*esto es la lista de los puntitos (o nuemros)*/
+    text-align: center;  /*para centrar */
+    margin-block-start: 10px;
+}
+
+.slider-bullet { /*para darle estilos a los bullet (pelotitas en vez de los numeros)*/
+    display: inline-block; /*por defecto los elementos ancla son elemesntos inlne(asi que mejor pongamos el comando inline-block)*/
+    inline-size: 15px; /*para acompañar a inline-block*/
+    block-size: 15px; /*para acompañar a inline-block*/
+    background-color: var(--purpura); /*darle color a las pelotas*/
+    border-radius: 50%; /*para hacerlo redondeado*/
+}
+
+.form input {
+    max-inline-size: 280px;
+    width: 100%;
+    border: 1px solid var(--black);
+    background: transparent;
+    box-sizing: border-box;
+    border-radius: 90px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    color: var(--black);
+    font-weight: 400;
+    font-size: 16px;
+    display: inline-block;
+    margin-block-end: 24px;
+    font-family: 'Rubik';
+}
+.form input::-webkit-input-placeholder {
+    color: var(--black);
+}
+.form input[type="submit"] {
+    background: var(--purpura);
+    border-color: var(--black);
+    color: var(--white);
+    border-radius: 90px;
+    font-weight: 500;
+    inline-size: 119px;
+    margin-inline-start: -123px;
+}
+
+@media screen and (min-width: 1366px) { /*se cumple la condicion solo si es mas grande que los px que pongamos osea si estamos en un monitor |(min-width: 700px) piensa en los mobiles primero y (max-width: 700px) en los dispositibos grandes*/
+    .hero {
+        block-size: 350px;
+    }
+
+    .header { /*invocar*/
+        position: sticky; /* para que jo lo posicione y para que se mueva con la pagina(requiere comando de inicializacion" inset-block-start: 0 o top: 0;" )*/
+        inset-block-start: -35px; /*para cuando hicieras scrol hacia abajo, no se quede tan arriba el bloque*/
+    }
+
+    .header-content {
+        position: relative; /*relativo para que contenga los elemntos y hacer que salga de la caja (inset-inline-start: -188px;) */
+        inset-block-start: 65px; /*para que no este tan ariba del todo*/
+    }
+
+    header { /*es el menu de la izquierda de la pagina*/
+        font-size: 14px;
+        color: var(--black); /*cambiar color a los mini titulos y asin tambien quita subrallado de algun texto despues de hacer clic*/
+        position: absolute; /*para que este hacia arriba*/
+        inline-size: 188px; /*para darle un anchoa la caja contenedora */
+    
+        /* top: ; */
+        /*inset-block-start: 0; /* equivale a top: ;*/
+        /* bottom: ; */
+        /* inset-block-end: ;  equivale a bottom: ;*/
+        /* left: ; */
+        /*inset-inline-start: -208px; /* equivale a left: ;*/
+        /* right: ; */
+        inset-inline-end: -208px; /*equivale a right: ;*/
+    }
+
+    h1 { /*Titulo principal*/
+        font-size: 59px;
+        margin-block-start: 64px;
+    }
+    blockquote p { /*se crea 'blockquote p' por separado porque la 'p' esta dentro de 'blockquote'*/
+        color: var(--black); /*color a la letra de 'p' (parafo)*/
+        font-size: 24px; /*tamaño de fuente de letra*/ 
+        text-align: left;
+    }
+
+}
